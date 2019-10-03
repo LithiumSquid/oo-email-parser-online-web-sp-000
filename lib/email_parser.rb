@@ -12,7 +12,7 @@ end
 
 def parse
   @email_addresses.split.map do |x| 
-    x.split("," || " ")
+    x.split(",", " ")
 end
 end
 
