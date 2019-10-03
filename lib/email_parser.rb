@@ -11,8 +11,12 @@ class EmailAddressParser
 end
 
 def parse
-  @email_addresses.split.map{|x| x.split(",")}
+  @email_addresses.split.map do |x| 
+    x.split(",")
 end
+.flatten.uniq
+end
+
 end
 
 # regex: (/[\s,]+/)
